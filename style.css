@@ -1,0 +1,180 @@
+/* 1. Root Variables & Reset */
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --text-color: #333;
+    --bg-light: #f9f9f9;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+/* 2. Navigation */
+header {
+    background: var(--white);
+    padding: 1rem 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* 3. Hero Sections (Shared Styles) */
+#hero, #about-hero, #contact-hero {
+    padding: 80px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+}
+
+#hero h1, #about-hero h1, #contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* 4. Content Containers */
+main {
+    min-height: 80vh;
+}
+
+#about-content, #contact-container {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 800px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* 5. Typography & Lists */
+h2 {
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+/* 6. Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* 7. Buttons */
+button, .submit-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+#hero button {
+    background: var(--white);
+    color: var(--primary-color);
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+}
+
+button:hover, .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    filter: brightness(1.1);
+}
+
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #888;
+    background: #eee;
+    margin-top: 50px;
+}
+
+/* 9. Responsive Design */
+@media (max-width: 768px) {
+    #hero h1, #about-hero h1, #contact-hero h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+}
